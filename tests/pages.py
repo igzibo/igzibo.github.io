@@ -1,0 +1,19 @@
+# Key pages exercised by the regression tests. Add new pages here as they are built.
+PAGES = [
+    "/",
+    "/about/",
+    "/services/",
+    "/services/resource-placement/",
+    "/services/rd/",
+    "/team/",
+    "/team/engineers/",
+    "/team/engineers/boukhalfa-ouhamouche/",
+    "/team/engineers/boukhalfa-ouhamouche/cv/",
+    "/team/engineers/philip-taku/",
+    "/team/engineers/philip-taku/cv/",
+    "/team/engineers/yevgeniy-ledvin/",
+    "/team/engineers/yevgeniy-ledvin/cv/",
+    "/team/leadership/",
+    "/team/leadership/ryan-schostag/",
+    "/team/leadership/ryan-schostag/cv/",
+]
