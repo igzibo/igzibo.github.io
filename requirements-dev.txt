@@ -1,0 +1,10 @@
+# Dev/test dependencies for regression testing this static site.
+# Install into the project virtual environment, e.g.:
+#   ../venvs/igzibo-github-io/Scripts/pip install -r requirements-dev.txt
+#   ../venvs/igzibo-github-io/Scripts/playwright install chromium
+pytest>=8.0
+playwright>=1.45
+axe-playwright-python>=0.1.5
+beautifulsoup4>=4.12
+Pillow>=10.0
+html5validator>=0.4.2
