@@ -12,6 +12,7 @@
 - Reuse existing components, styles, utilities, and configuration where appropriate.
 - Use Test-Driven Development (TDD) whenever possible. Only update existing test modules when absolutely necessary; otherwise, always update the code to pass failing tests. 
 - When provided an output file, do not delete or overwrite it during troubleshooting or validation. Instead, simply create a new output file and provide the path to it when ready to share the results.
+- When you need to run a `pytest` command, prompt me with the command to run, and I will run it to save on credits. Then, I will provide you a new output file or paste the output in the conversation thread for you to read so you can proceed.
 
 ## GitHub Pages
 
@@ -93,3 +94,7 @@ Each commit should:
 - Clearly describe what changed.
 - Report validation performed.
 - Provide your commit message in a plain text block with no file hyperlinks.
+
+## Documentation
+
+- Update documentation to reflect changes made.
