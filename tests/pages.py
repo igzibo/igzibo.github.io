@@ -16,4 +16,13 @@ PAGES = [
     "/team/leadership/",
     "/team/leadership/ryan-schostag/",
     "/team/leadership/ryan-schostag/cv/",
+    "/policies/",
+    "/policies/client-services/",
+    "/policies/corporate/",
+    "/policies/governance/",
+    "/policies/privacy/",
+    "/policies/recruiting/",
+    "/policies/security/",
+    "/policies/website/",
+    "/policies/security/password-and-authentication-standard-v1.html",
 ]

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Software Development Standard | Igzibo Policies</title>
+  <meta name="description" content="Secure Software Development Standard - Security policy document from Igzibo Engineering Solutions.">
+  <meta name="author" content="Igzibo Engineering Solutions">
+  <meta property="og:title" content="Secure Software Development Standard | Igzibo Policies">
+  <meta property="og:description" content="Secure Software Development Standard - Security policy document from Igzibo Engineering Solutions.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="logo-text">IGZIBO</a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/team/">Team</a></li>
+          <li class="nav-dropdown">
+            <a href="/policies/">Policies</a>
+            <ul class="nav-dropdown-menu">
+              <li><a href="/policies/client-services/">Client Services</a></li>
+              <li><a href="/policies/corporate/">Corporate</a></li>
+              <li><a href="/policies/governance/">Governance</a></li>
+              <li><a href="/policies/privacy/">Privacy</a></li>
+              <li><a href="/policies/recruiting/">Recruiting</a></li>
+              <li><a href="/policies/security/">Security</a></li>
+              <li><a href="/policies/website/">Website</a></li>
+            </ul>
+          </li>
+          <li><a href="https://calendly.com/igzibo-support" class="btn">Schedule Meeting</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+  <section>
+    <div class="container">
+      <p><a href="/policies/security/" class="policy-back-link">&larr; Back to Security Policies</a></p>
+
+      <article class="policy-document">
+        <h1>Secure Software Development Standard</h1>
+        <p><strong>Organization:</strong> Igzibo Engineering Solutions, Inc.<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Living policy<br />
+<strong>Effective Date:</strong> September 16, 2026<br />
+<strong>Owner:</strong> Igzibo Engineering Solutions, Inc.<br />
+<strong>Review Cycle:</strong> At least annually and after material changes to applicable law, client requirements, technology, or business operations.</p>
+<h2>1. Purpose</h2>
+<p>Establishes baseline requirements for secure planning, design, development, testing, release, maintenance, and retirement of software.</p>
+<h2>2. Scope</h2>
+<p>Employees, contractors, consultants, engineers, developers, project managers, R&amp;D personnel, and third parties performing software development for Igzibo where contractually applicable.</p>
+<h2>Definitions</h2>
+<p><strong>AI (Artificial Intelligence):</strong> A machine-based system capable of generating predictions, recommendations, decisions, content, or other outputs based on inputs.
+<strong>CI/CD (Continuous Integration and Continuous Delivery or Deployment):</strong> Processes used to build, test, validate, and deliver software changes.
+<strong>Dependency:</strong> A software component, package, library, service, or other external component required by software.
+<strong>Igzibo:</strong> Igzibo Engineering Solutions, Inc.
+<strong>R&amp;D (Research and Development):</strong> Research, experimentation, prototyping, engineering investigation, or development of products, services, methods, or technologies.
+<strong>SDLC (Software Development Life Cycle):</strong> Activities used to plan, design, develop, test, release, operate, maintain, and retire software.</p>
+<h2>3. Core Principles</h2>
+<p>Software development must use authorized repositories and environments; protect secrets and sensitive information; control dependencies; apply appropriate testing and review; preserve client and intellectual-property restrictions; and address material vulnerabilities.</p>
+<h2>4. Planning and Design</h2>
+<p>Projects should identify security, privacy, contractual, data-classification, intellectual-property, availability, authentication, authorization, logging, and recovery requirements. Higher-risk systems should document material security decisions.</p>
+<h2>5. Source Code, Secrets, and Dependencies</h2>
+<p>Source code must reside in approved repositories. Passwords, tokens, API keys, private keys, and other secrets must not be committed or placed in public or unauthorized systems. Dependencies must come from legitimate sources and comply with license and security requirements.</p>
+<h2>6. Secure Implementation</h2>
+<p>Development should apply input validation, safe output handling, secure authentication and authorization, safe error handling, appropriate cryptography, dependency controls, and secure defaults.</p>
+<h2>7. Review, Testing, and CI/CD</h2>
+<p>Material changes should receive appropriate review and testing. Testing may include unit, integration, regression, security, static, dynamic, dependency, and manual testing. CI/CD identities and credentials must be protected and release changes controlled.</p>
+<h2>8. Vulnerability and Release Management</h2>
+<p>Material vulnerabilities must be assessed and remediated or formally accepted. Before release, teams should confirm testing, approvals, security findings, configuration, rollback or recovery capability, and client requirements.</p>
+<h2>9. Production Data and AI</h2>
+<p>Production or client data must not be copied into development or testing without authorization. AI-assisted development must comply with the AI and Generative AI Usage Standard and requires human review for material code.</p>
+<h2>10. Maintenance, Retirement, and Incidents</h2>
+<p>Retirement must address access, credentials, data, dependencies, client obligations, and ownership records. Software vulnerabilities and security incidents must be reported under the Security Incident Response Procedure.</p>
+<h2>11. Exceptions and Enforcement</h2>
+<p>Exceptions require documented authorization identifying risk, safeguards, duration, and authority. Violations may result in corrective action, access restrictions, contractual remedies, or termination.</p>
+<h2>12. References and Research Basis</h2>
+<ul>
+<li>National Institute of Standards and Technology (NIST), <a href="https://csrc.nist.gov/pubs/sp/800/218/final">Secure Software Development Framework (SSDF) Version 1.1, SP 800-218</a>.</li>
+<li>NIST, <a href="https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20">Cybersecurity Framework (CSF) 2.0</a>.</li>
+</ul>
+<p>NIST published a draft revision of SP 800-218 in 2025. This standard uses the final version 1.1 unless a later final version is formally adopted by Igzibo.</p>
+<h2>Version History</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2026-09-16</td>
+<td>Initial secure software development standard.</td>
+</tr>
+</tbody>
+</table>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Partner With Igzibo?</h2>
+      <p>Let's discuss how our team can help you achieve your engineering and technology goals.</p>
+
+      <div class="cta-links">
+        <a href="/services/" class="btn btn-large">Explore Services</a>
+        <a href="https://calendly.com/igzibo-support" class="btn-outline btn-large">Schedule a Call</a>
+      </div>
+
+      <p class="cta-contact">
+        <strong>Phone:</strong> <a href="tel:+19712361374">971-236-1374</a> |
+        <strong>Email:</strong> <a href="mailto:support@igzibo.com">support@igzibo.com</a>
+      </p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>IGZIBO | Engineering Solutions. Building What's Next.</strong></p>
+      <p>Phone: <a href="tel:+19712361374">971-236-1374</a></p>
+      <p>Calendly: <a href="https://calendly.com/igzibo-support">Schedule a Meeting</a></p>
+      <p class="footer-copyright">&copy; 2024 Igzibo Engineering Solutions, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

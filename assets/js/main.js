@@ -13,8 +13,35 @@ function setActiveNav() {
   });
 }
 
+// Add the shared Policies menu to pages created before policy navigation existed.
+function addPoliciesNav() {
+  const navLinks = document.querySelector('.nav-links');
+  if (!navLinks || navLinks.querySelector('.nav-dropdown')) {
+    return;
+  }
+
+  const policyCategories = [
+    ['Client Services', '/policies/client-services/'],
+    ['Corporate', '/policies/corporate/'],
+    ['Governance', '/policies/governance/'],
+    ['Privacy', '/policies/privacy/'],
+    ['Recruiting', '/policies/recruiting/'],
+    ['Security', '/policies/security/'],
+    ['Website', '/policies/website/']
+  ];
+  const policyItem = document.createElement('li');
+  policyItem.className = 'nav-dropdown';
+  policyItem.innerHTML = '<a href="/policies/">Policies</a><ul class="nav-dropdown-menu">' +
+    policyCategories.map(([name, href]) => `<li><a href="${href}">${name}</a></li>`).join('') +
+    '</ul>';
+  navLinks.insertBefore(policyItem, navLinks.querySelector('.btn')?.parentElement || null);
+}
+
 // Run on page load
-document.addEventListener('DOMContentLoaded', setActiveNav);
+document.addEventListener('DOMContentLoaded', () => {
+  addPoliciesNav();
+  setActiveNav();
+});
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

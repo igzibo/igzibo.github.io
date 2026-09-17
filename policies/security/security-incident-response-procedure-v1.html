@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Incident Response Procedure | Igzibo Policies</title>
+  <meta name="description" content="Security Incident Response Procedure - Security policy document from Igzibo Engineering Solutions.">
+  <meta name="author" content="Igzibo Engineering Solutions">
+  <meta property="og:title" content="Security Incident Response Procedure | Igzibo Policies">
+  <meta property="og:description" content="Security Incident Response Procedure - Security policy document from Igzibo Engineering Solutions.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="logo-text">IGZIBO</a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/team/">Team</a></li>
+          <li class="nav-dropdown">
+            <a href="/policies/">Policies</a>
+            <ul class="nav-dropdown-menu">
+              <li><a href="/policies/client-services/">Client Services</a></li>
+              <li><a href="/policies/corporate/">Corporate</a></li>
+              <li><a href="/policies/governance/">Governance</a></li>
+              <li><a href="/policies/privacy/">Privacy</a></li>
+              <li><a href="/policies/recruiting/">Recruiting</a></li>
+              <li><a href="/policies/security/">Security</a></li>
+              <li><a href="/policies/website/">Website</a></li>
+            </ul>
+          </li>
+          <li><a href="https://calendly.com/igzibo-support" class="btn">Schedule Meeting</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+  <section>
+    <div class="container">
+      <p><a href="/policies/security/" class="policy-back-link">&larr; Back to Security Policies</a></p>
+
+      <article class="policy-document">
+        <h1>Security Incident Response Procedure</h1>
+        <p><strong>Organization:</strong> Igzibo Engineering Solutions, Inc.<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Living procedure<br />
+<strong>Effective Date:</strong> September 16, 2026<br />
+<strong>Owner:</strong> Igzibo Engineering Solutions, Inc.<br />
+<strong>Review Cycle:</strong> At least annually and after any material security incident, material organizational change, or material change to applicable legal, regulatory, contractual, or client requirements.</p>
+<h2>1. Purpose</h2>
+<p>This procedure establishes the process Igzibo Engineering Solutions, Inc. uses to identify, report, assess, contain, investigate, recover from, and learn from security incidents.</p>
+<p>The procedure operationalizes the incident-reporting and security requirements established by the Technology Acceptable Use Policy, Identity and Access Management Standard, Data Classification and Handling Standard, AI and Generative AI Usage Standard, and Technology and Third-Party Service Security Standard.</p>
+<p>The procedure is designed to support a consistent response while remaining technology-neutral. Specific platform, vendor, cloud, endpoint, logging, and security-tool instructions should be maintained in separate implementation procedures or runbooks.</p>
+<h2>2. Scope</h2>
+<p>This procedure applies to:</p>
+<ul>
+<li>Employees, contractors, consultants, and other authorized users.</li>
+<li>Organizational accounts and identities.</li>
+<li>Devices, applications, source-code repositories, cloud services, SaaS services, APIs, and other organizational resources.</li>
+<li>Information owned, controlled, processed, or entrusted to Igzibo.</li>
+<li>Client information and client environments where Igzibo has an incident-response obligation.</li>
+<li>Third-party services and providers that process Igzibo information or connect to organizational resources.</li>
+<li>AI systems, AI agents, models, RAG systems, and related services used for business purposes.</li>
+<li>Suspected, attempted, or confirmed security incidents.</li>
+</ul>
+<p>This procedure does not replace contractual, regulatory, legal, client, or law-enforcement reporting requirements. Where another requirement is more restrictive, the more restrictive requirement applies unless prohibited by law.</p>
+<h2>3. Definitions</h2>
+<p><strong>AI (Artificial Intelligence):</strong> A machine-based system capable of generating predictions, recommendations, decisions, content, or other outputs based on inputs.</p>
+<p><strong>CISA (Cybersecurity and Infrastructure Security Agency):</strong> A U.S. government agency that publishes cybersecurity guidance and incident-response resources.</p>
+<p><strong>Confidential Information:</strong> Information that requires controlled access because unauthorized disclosure, alteration, or loss could create meaningful business, contractual, privacy, security, or client impact.</p>
+<p><strong>Incident:</strong> A suspected or confirmed event that may compromise the confidentiality, integrity, or availability of information, systems, accounts, services, or business operations.</p>
+<p><strong>Incident Coordinator:</strong> The person assigned to coordinate response activities, maintain the incident record, and ensure appropriate escalation.</p>
+<p><strong>Incident Record:</strong> The controlled record containing incident facts, decisions, actions, evidence references, communications, and closure information.</p>
+<p><strong>Indicator of Compromise (IOC):</strong> Observable evidence that may indicate malicious or unauthorized activity, such as a suspicious address, file, process, domain, account activity, or authentication event.</p>
+<p><strong>Information Security Incident:</strong> An incident involving actual or suspected unauthorized access, disclosure, alteration, destruction, loss, misuse, disruption, or compromise of information or technology resources.</p>
+<p><strong>NIST (National Institute of Standards and Technology):</strong> A U.S. government organization that publishes cybersecurity and technology guidance.</p>
+<p><strong>Personal Information:</strong> Information relating to an identified or identifiable person.</p>
+<p><strong>Restricted Information:</strong> Information requiring the highest level of protection under the Data Classification and Handling Standard.</p>
+<p><strong>Security Event:</strong> An observable occurrence in a system, service, account, device, or environment that may be relevant to security.</p>
+<p><strong>Security Incident:</strong> A security event that has been determined, or reasonably suspected, to require investigation or response.</p>
+<p><strong>Third Party:</strong> An external organization or individual that provides a service, product, system, personnel, or other capability to Igzibo.</p>
+<p><strong>Triage:</strong> The initial process of validating a report, determining its significance, establishing scope, and assigning response priority.</p>
+<h2>4. Relationship to Other Governance Documents</h2>
+<p>This procedure operates within the Igzibo technology governance framework.</p>
+<p>The following documents establish related requirements:</p>
+<ol>
+<li>Technology Acceptable Use Policy.</li>
+<li>Identity and Access Management Standard.</li>
+<li>Data Classification and Handling Standard.</li>
+<li>AI and Generative AI Usage Standard.</li>
+<li>Technology and Third-Party Service Security Standard.</li>
+<li>Security Incident Response Procedure.</li>
+</ol>
+<p>The Security Incident Response Procedure establishes how incidents are handled. It does not independently change the classification, access, acceptable-use, AI, or third-party security requirements established by the other documents.</p>
+<p>Client contracts, statements of work, data-processing agreements, applicable laws, regulations, and other binding requirements may impose additional notification, preservation, investigation, or reporting obligations.</p>
+<h2>5. Incident Response Principles</h2>
+<p>Igzibo's incident response process follows these principles:</p>
+<ul>
+<li>Report suspected security incidents promptly.</li>
+<li>Protect people, clients, information, and critical business operations.</li>
+<li>Preserve evidence before taking actions that could destroy or alter it when practical.</li>
+<li>Contain active threats as quickly as reasonably possible.</li>
+<li>Use the minimum access necessary to investigate and respond.</li>
+<li>Maintain an accurate incident record.</li>
+<li>Separate confirmed facts from assumptions and unverified reports.</li>
+<li>Escalate incidents based on actual or reasonably anticipated impact.</li>
+<li>Protect confidential and restricted information during the response.</li>
+<li>Coordinate with affected clients and third parties when required.</li>
+<li>Do not make unauthorized public statements about incidents.</li>
+<li>Restore services only after reasonable security checks have been completed.</li>
+<li>Capture lessons learned and corrective actions.</li>
+</ul>
+<h2>6. Roles and Responsibilities</h2>
+<h3>6.1 Incident Coordinator</h3>
+<p>The Incident Coordinator is responsible for coordinating the response and maintaining the incident record.</p>
+<p>Responsibilities include:</p>
+<ul>
+<li>Establishing the incident record.</li>
+<li>Confirming the initial classification and priority.</li>
+<li>Assigning response tasks.</li>
+<li>Coordinating technical, business, legal, client, and third-party activities as appropriate.</li>
+<li>Maintaining a timeline of material actions and decisions.</li>
+<li>Tracking containment, eradication, recovery, and follow-up actions.</li>
+<li>Coordinating closure and lessons learned.</li>
+</ul>
+<p>One person may perform multiple roles when the size of the incident or organization makes separate assignments impractical.</p>
+<h3>6.2 Technology or Security Responder</h3>
+<p>The responder performs technical investigation and response activities appropriate to the incident.</p>
+<p>Responsibilities may include:</p>
+<ul>
+<li>Validating indicators and suspicious activity.</li>
+<li>Reviewing relevant logs and security information.</li>
+<li>Identifying affected accounts, devices, applications, services, and data.</li>
+<li>Containing affected resources.</li>
+<li>Removing malicious or unauthorized access.</li>
+<li>Restoring systems.</li>
+<li>Identifying additional indicators of compromise.</li>
+<li>Documenting technical findings.</li>
+</ul>
+<h3>6.3 Data Owner or Business Owner</h3>
+<p>The relevant Data Owner or business owner helps determine business impact, information sensitivity, client impact, and required business decisions.</p>
+<h3>6.4 Management</h3>
+<p>Management provides decisions and resources when an incident could materially affect business operations, clients, finances, legal obligations, personnel, reputation, or contractual commitments.</p>
+<h3>6.5 Legal and Privacy Support</h3>
+<p>Legal or privacy support should be engaged when appropriate, including incidents involving:</p>
+<ul>
+<li>Personal information.</li>
+<li>Confidential or restricted information.</li>
+<li>Client information.</li>
+<li>Potential regulatory obligations.</li>
+<li>Contractual notification requirements.</li>
+<li>Litigation, investigation, or legal holds.</li>
+<li>Law-enforcement requests.</li>
+<li>Potential material legal exposure.</li>
+</ul>
+<p>Igzibo should obtain qualified legal advice when legal obligations are uncertain or material.</p>
+<h3>6.6 Third-Party Providers</h3>
+<p>Third-party providers must participate in incident response when their services, systems, personnel, or information are involved.</p>
+<p>Service owners should use applicable contractual contacts and escalation procedures.</p>
+<h2>7. Incident Reporting</h2>
+<p>Any person who reasonably suspects a security incident must report it promptly through the designated Igzibo security or management reporting channel.</p>
+<p>Examples include:</p>
+<ul>
+<li>Lost or stolen organizational devices.</li>
+<li>Suspected account compromise.</li>
+<li>Unexpected authentication activity.</li>
+<li>Accidental disclosure of confidential information.</li>
+<li>Malware or ransomware indicators.</li>
+<li>Unauthorized access.</li>
+<li>Suspicious email or messaging activity.</li>
+<li>Exposure of credentials, tokens, keys, or secrets.</li>
+<li>Unauthorized source-code or repository access.</li>
+<li>Suspicious changes to production systems.</li>
+<li>Security issues involving an AI service or AI agent.</li>
+<li>Suspected compromise of a third-party service.</li>
+<li>Client notification of suspected compromise involving Igzibo.</li>
+<li>Any event that could materially affect confidentiality, integrity, or availability.</li>
+</ul>
+<p>Users should report suspected incidents even when they are uncertain whether an actual incident occurred.</p>
+<p>A user should not delay reporting in order to complete an investigation independently.</p>
+<h2>8. Initial Response</h2>
+<p>Upon receiving a report, the Incident Coordinator or designated responder should:</p>
+<ol>
+<li>Record the report.</li>
+<li>Record the date and time received.</li>
+<li>Identify the reporter and affected business area when known.</li>
+<li>Record the known facts without speculation.</li>
+<li>Determine whether immediate containment is required.</li>
+<li>Identify potentially affected systems, accounts, services, information, and third parties.</li>
+<li>Determine whether evidence should be preserved before remediation.</li>
+<li>Assign an initial priority.</li>
+<li>Escalate when required.</li>
+</ol>
+<p>If an incident is actively causing harm, reasonable containment actions may begin before the investigation is complete.</p>
+<h2>9. Incident Classification and Priority</h2>
+<p>Incident priority should consider:</p>
+<ul>
+<li>Information classification.</li>
+<li>Number and type of affected users.</li>
+<li>Client impact.</li>
+<li>Whether privileged accounts are involved.</li>
+<li>Whether credentials or authentication mechanisms are compromised.</li>
+<li>Whether production systems are affected.</li>
+<li>Potential financial impact.</li>
+<li>Potential legal or regulatory impact.</li>
+<li>Business continuity impact.</li>
+<li>Scope and duration.</li>
+<li>Whether the threat remains active.</li>
+<li>Whether the incident may spread to other systems or organizations.</li>
+<li>Contractual or client notification deadlines.</li>
+</ul>
+<h3>9.1 Priority 1: Critical</h3>
+<p>Use Priority 1 when an incident presents a material and potentially immediate threat to critical operations, significant client information, Restricted Information, privileged access, or major business functions.</p>
+<p>Examples may include:</p>
+<ul>
+<li>Active ransomware affecting critical systems.</li>
+<li>Confirmed compromise of a highly privileged organizational identity.</li>
+<li>Confirmed material disclosure of Restricted Information.</li>
+<li>Active compromise of a critical production service.</li>
+<li>A significant incident affecting multiple clients or core business operations.</li>
+</ul>
+<h3>9.2 Priority 2: High</h3>
+<p>Use Priority 2 when the incident has substantial security, client, operational, financial, or contractual impact but does not meet the Priority 1 threshold.</p>
+<p>Examples may include:</p>
+<ul>
+<li>Confirmed compromise of a standard organizational account.</li>
+<li>Unauthorized access to Confidential Information.</li>
+<li>Significant compromise of a third-party service.</li>
+<li>Malware affecting an important business device or service.</li>
+</ul>
+<h3>9.3 Priority 3: Moderate</h3>
+<p>Use Priority 3 when the incident has limited scope or impact and does not currently present a significant threat to critical operations or highly sensitive information.</p>
+<p>Examples may include:</p>
+<ul>
+<li>A contained malware event.</li>
+<li>A suspected account compromise that was blocked promptly.</li>
+<li>Limited unauthorized access with no evidence of sensitive-data exposure.</li>
+</ul>
+<h3>9.4 Priority 4: Low</h3>
+<p>Use Priority 4 for events requiring review but presenting limited apparent risk.</p>
+<p>Examples may include:</p>
+<ul>
+<li>Low-risk policy violations.</li>
+<li>Benign security alerts after investigation.</li>
+<li>Isolated suspicious activity with no evidence of compromise.</li>
+</ul>
+<p>Priority may be increased or decreased as facts become available.</p>
+<h2>10. Investigation and Analysis</h2>
+<p>The responder should establish what happened, what was affected, and whether the threat remains active.</p>
+<p>Investigation should consider:</p>
+<ul>
+<li>Initial entry point.</li>
+<li>Affected identities.</li>
+<li>Authentication activity.</li>
+<li>Affected devices and systems.</li>
+<li>Affected applications and services.</li>
+<li>Data involved.</li>
+<li>Time period.</li>
+<li>Actions performed by the attacker or unauthorized user.</li>
+<li>Indicators of compromise.</li>
+<li>Persistence mechanisms.</li>
+<li>Lateral movement.</li>
+<li>Privilege escalation.</li>
+<li>Data access or exfiltration.</li>
+<li>Impact to availability or integrity.</li>
+<li>Third-party involvement.</li>
+<li>Client involvement.</li>
+<li>Remaining exposure.</li>
+</ul>
+<p>Investigation records should distinguish:</p>
+<ul>
+<li>Confirmed facts.</li>
+<li>Reasonable findings.</li>
+<li>Unverified reports.</li>
+<li>Working hypotheses.</li>
+<li>Unknowns requiring further investigation.</li>
+</ul>
+<h2>11. Evidence Preservation</h2>
+<p>When practical, evidence should be preserved before destructive remediation actions.</p>
+<p>Potential evidence includes:</p>
+<ul>
+<li>Authentication and access logs.</li>
+<li>Application and system logs.</li>
+<li>Security alerts.</li>
+<li>Email or messaging records.</li>
+<li>Relevant source-code or repository activity.</li>
+<li>File metadata.</li>
+<li>Network information.</li>
+<li>Cloud audit records.</li>
+<li>Device information.</li>
+<li>Screenshots or other observations.</li>
+<li>Relevant communications.</li>
+<li>Third-party incident records.</li>
+</ul>
+<p>Evidence should be handled in a manner appropriate to its sensitivity and potential legal or investigative use.</p>
+<p>Personnel should not alter, delete, or overwrite relevant evidence unnecessarily.</p>
+<p>When a legal hold, investigation, or regulatory preservation requirement applies, the response should follow the applicable direction from qualified legal counsel or the responsible authority.</p>
+<h2>12. Containment</h2>
+<p>Containment is intended to prevent further unauthorized activity while preserving the ability to investigate and recover.</p>
+<p>Depending on the incident, containment may include:</p>
+<ul>
+<li>Disabling or restricting compromised accounts.</li>
+<li>Revoking sessions, tokens, keys, or credentials.</li>
+<li>Isolating affected devices.</li>
+<li>Restricting network or application access.</li>
+<li>Suspending compromised integrations.</li>
+<li>Disabling malicious automation.</li>
+<li>Blocking identified indicators.</li>
+<li>Restricting affected third-party services.</li>
+<li>Removing public exposure.</li>
+<li>Temporarily suspending affected business processes.</li>
+</ul>
+<p>Containment actions should be proportionate to the risk and documented in the incident record.</p>
+<p>For high-impact incidents, the Incident Coordinator should consider whether containment could destroy evidence or interfere with legal, contractual, or client requirements before taking irreversible actions, unless immediate action is necessary to prevent ongoing harm.</p>
+<h2>13. Eradication</h2>
+<p>After reasonable containment and investigation, the responder should remove the cause or mechanism of compromise.</p>
+<p>Depending on the incident, eradication may include:</p>
+<ul>
+<li>Removing malicious software.</li>
+<li>Removing unauthorized accounts or access.</li>
+<li>Rotating credentials and secrets.</li>
+<li>Removing persistence mechanisms.</li>
+<li>Correcting exploited configuration weaknesses.</li>
+<li>Patching affected software.</li>
+<li>Rebuilding compromised systems.</li>
+<li>Removing unauthorized integrations.</li>
+<li>Replacing compromised credentials, keys, or certificates.</li>
+<li>Correcting access-control weaknesses.</li>
+</ul>
+<p>Eradication should address the underlying cause where reasonably possible rather than only removing visible symptoms.</p>
+<h2>14. Recovery</h2>
+<p>Recovery restores affected services to normal operation while reducing the likelihood of recurrence.</p>
+<p>Before returning affected systems or services to normal operation, the responder should determine, as appropriate:</p>
+<ul>
+<li>Whether the threat has been contained.</li>
+<li>Whether unauthorized access has been removed.</li>
+<li>Whether required credentials and secrets have been rotated.</li>
+<li>Whether affected systems have been patched or rebuilt.</li>
+<li>Whether security controls are operating as expected.</li>
+<li>Whether data integrity has been reasonably validated.</li>
+<li>Whether monitoring has been increased.</li>
+<li>Whether clients or third parties require notification.</li>
+<li>Whether business owners approve restoration.</li>
+</ul>
+<p>Recovery actions should be documented.</p>
+<p>For critical services, recovery should be coordinated with applicable business continuity and backup procedures.</p>
+<h2>15. Communications and Notifications</h2>
+<p>Incident communications must be accurate, controlled, and appropriate to the audience.</p>
+<h3>15.1 Internal Communications</h3>
+<p>Internal communications should provide personnel with information necessary to perform their responsibilities.</p>
+<p>Personnel should not speculate about the cause, scope, responsible party, or impact of an incident.</p>
+<h3>15.2 Client Communications</h3>
+<p>Client notifications must follow applicable contracts, statements of work, data-processing agreements, client security requirements, and other binding obligations.</p>
+<p>When notification is required, the communication should be coordinated with the appropriate business and legal personnel.</p>
+<h3>15.3 Third-Party Communications</h3>
+<p>When a third-party provider is involved, the service owner should use the provider's established security or incident-response contact when appropriate.</p>
+<h3>15.4 External and Public Communications</h3>
+<p>Only authorized personnel may communicate externally on behalf of Igzibo about a security incident.</p>
+<p>Public statements should not disclose confidential, restricted, client, investigative, or legally protected information without appropriate authorization.</p>
+<h2>16. Credentials and Identity Response</h2>
+<p>When an incident may involve credentials or identities, response should consider:</p>
+<ul>
+<li>Disabling compromised accounts.</li>
+<li>Revoking active sessions.</li>
+<li>Resetting passwords where applicable.</li>
+<li>Rotating API keys, tokens, certificates, or other secrets.</li>
+<li>Reviewing recent authentication activity.</li>
+<li>Reviewing privilege changes.</li>
+<li>Reviewing newly created accounts.</li>
+<li>Reviewing delegated access and third-party integrations.</li>
+<li>Reviewing service accounts.</li>
+<li>Requiring additional authentication controls where appropriate.</li>
+</ul>
+<p>Credential rotation should account for dependencies so that legitimate services are not unintentionally disrupted.</p>
+<h2>17. Data Exposure Response</h2>
+<p>When information may have been accessed, disclosed, altered, or destroyed, the response should determine:</p>
+<ul>
+<li>What data was involved.</li>
+<li>Its classification.</li>
+<li>Whose information was involved.</li>
+<li>Whether client information was involved.</li>
+<li>Whether the information was actually accessed or only potentially exposed.</li>
+<li>The relevant time period.</li>
+<li>The likely scope of access.</li>
+<li>Whether copies may exist outside Igzibo's control.</li>
+<li>Applicable contractual, legal, regulatory, or client notification requirements.</li>
+</ul>
+<p>Data incidents should be coordinated with the Data Owner and appropriate legal or privacy support.</p>
+<h2>18. AI-Related Incidents</h2>
+<p>Incidents involving AI systems, AI providers, AI agents, RAG systems, model integrations, or AI-generated code should be handled under this procedure and the AI and Generative AI Usage Standard.</p>
+<p>Examples include:</p>
+<ul>
+<li>Unauthorized disclosure through an AI service.</li>
+<li>Prompt or output exposure of Confidential or Restricted Information.</li>
+<li>Compromise of an AI provider account.</li>
+<li>Unauthorized AI agent actions.</li>
+<li>Excessive permissions granted to an AI agent.</li>
+<li>Prompt injection leading to unauthorized actions or disclosure.</li>
+<li>Compromise of an AI-connected integration.</li>
+<li>Malicious or unauthorized code generated or deployed through an AI-assisted workflow.</li>
+<li>Model, retrieval, or tool behavior that creates a material security impact.</li>
+</ul>
+<p>Where an AI system can take actions in business systems, responders should consider both the AI system and the connected identities, tools, data sources, and downstream systems.</p>
+<h2>19. Third-Party Incidents</h2>
+<p>When a third-party service reports or is suspected of experiencing an incident affecting Igzibo, the Service Owner should:</p>
+<ol>
+<li>Obtain the provider's available incident information.</li>
+<li>Identify affected Igzibo accounts, integrations, systems, and data.</li>
+<li>Determine whether access should be restricted or suspended.</li>
+<li>Review available logs and provider evidence.</li>
+<li>Determine whether client information is affected.</li>
+<li>Review contractual notification obligations.</li>
+<li>Record provider communications and response actions.</li>
+<li>Track remediation and required follow-up.</li>
+<li>Reassess the service's security risk before normal use resumes.</li>
+</ol>
+<p>Third-party incident handling should be coordinated with the Technology and Third-Party Service Security Standard.</p>
+<h2>20. Client Incidents and Client Systems</h2>
+<p>When Igzibo personnel discover a security incident involving a client environment, the response must follow the applicable client agreement and authorized procedures.</p>
+<p>Igzibo personnel must not independently access, modify, investigate, contain, or restore client systems beyond their authorized scope.</p>
+<p>If the client's instructions are unclear, the issue should be escalated to the designated client contact and appropriate Igzibo management.</p>
+<h2>21. Incident Closure</h2>
+<p>An incident may be closed when the Incident Coordinator determines that:</p>
+<ul>
+<li>Immediate threats have been contained.</li>
+<li>Required eradication actions are complete or appropriately tracked.</li>
+<li>Recovery is complete or has transitioned to normal operational work.</li>
+<li>Required notifications have been completed or assigned.</li>
+<li>Evidence and incident records are preserved as required.</li>
+<li>Outstanding risks have owners and due dates.</li>
+<li>Required client or third-party actions are documented.</li>
+<li>Lessons learned have been captured when appropriate.</li>
+</ul>
+<p>Closure should record:</p>
+<ul>
+<li>Incident identifier.</li>
+<li>Dates and times.</li>
+<li>Summary.</li>
+<li>Root cause or most likely cause when known.</li>
+<li>Affected systems and information.</li>
+<li>Business and client impact.</li>
+<li>Containment actions.</li>
+<li>Eradication actions.</li>
+<li>Recovery actions.</li>
+<li>Notifications.</li>
+<li>Evidence references.</li>
+<li>Corrective actions.</li>
+<li>Open risks.</li>
+<li>Incident owner.</li>
+<li>Closure date.</li>
+</ul>
+<h2>22. Post-Incident Review</h2>
+<p>A post-incident review should be performed for material incidents and may be performed for lower-priority incidents when useful.</p>
+<p>The review should consider:</p>
+<ul>
+<li>What happened.</li>
+<li>What worked.</li>
+<li>What did not work.</li>
+<li>Detection effectiveness.</li>
+<li>Response effectiveness.</li>
+<li>Communication effectiveness.</li>
+<li>Control failures.</li>
+<li>Process failures.</li>
+<li>Training gaps.</li>
+<li>Technology gaps.</li>
+<li>Third-party issues.</li>
+<li>Required policy or standard changes.</li>
+<li>Required technical remediation.</li>
+<li>Required monitoring improvements.</li>
+</ul>
+<p>The purpose of the review is to improve security and response capability, not to assign blame.</p>
+<h2>23. Corrective and Preventive Actions</h2>
+<p>Corrective actions should be tracked to completion when material.</p>
+<p>Actions may include:</p>
+<ul>
+<li>Access-control changes.</li>
+<li>Credential rotation.</li>
+<li>Security configuration changes.</li>
+<li>Patching.</li>
+<li>Architecture changes.</li>
+<li>Monitoring improvements.</li>
+<li>Data-handling changes.</li>
+<li>Vendor changes.</li>
+<li>Contractual changes.</li>
+<li>Training.</li>
+<li>Policy or standard updates.</li>
+<li>New procedures or runbooks.</li>
+<li>Backup or recovery improvements.</li>
+</ul>
+<p>Each material action should have an owner and target completion date.</p>
+<p>Risk acceptance or deferred remediation must follow the applicable exception process.</p>
+<h2>24. Incident Records and Retention</h2>
+<p>Incident records should be stored in an authorized organizational resource with access limited to personnel who require the information.</p>
+<p>Incident records may contain highly sensitive information and should be classified and handled according to the Data Classification and Handling Standard.</p>
+<p>Records should include enough information to support:</p>
+<ul>
+<li>Investigation.</li>
+<li>Client or contractual reporting.</li>
+<li>Regulatory or legal review where applicable.</li>
+<li>Internal accountability.</li>
+<li>Lessons learned.</li>
+<li>Future incident response.</li>
+</ul>
+<p>Retention periods should follow applicable legal, contractual, regulatory, records-retention, and litigation-hold requirements.</p>
+<h2>25. Testing and Readiness</h2>
+<p>Igzibo should periodically test incident-response readiness appropriate to its size, risk, and operating model.</p>
+<p>Testing may include:</p>
+<ul>
+<li>Tabletop exercises.</li>
+<li>Account-compromise exercises.</li>
+<li>Lost-device scenarios.</li>
+<li>Data-disclosure scenarios.</li>
+<li>Ransomware scenarios.</li>
+<li>Third-party service compromise scenarios.</li>
+<li>AI-agent or AI-service scenarios.</li>
+<li>Backup and recovery exercises.</li>
+</ul>
+<p>Exercise results should be documented and used to improve the incident-response process.</p>
+<h2>26. Exceptions</h2>
+<p>Exceptions to this procedure require documented approval from the appropriate Igzibo authority.</p>
+<p>An exception request should include:</p>
+<ul>
+<li>Requirement being excepted.</li>
+<li>Business justification.</li>
+<li>Scope.</li>
+<li>Duration.</li>
+<li>Risk created.</li>
+<li>Compensating controls.</li>
+<li>Owner.</li>
+<li>Approval.</li>
+<li>Review or expiration date.</li>
+</ul>
+<p>Exceptions must not be used to bypass legal, regulatory, contractual, or client obligations.</p>
+<h2>27. Enforcement</h2>
+<p>Failure to follow this procedure may result in corrective action appropriate to the circumstances.</p>
+<p>Nothing in this procedure prevents Igzibo from taking immediate action necessary to protect people, information, systems, clients, or business operations.</p>
+<h2>28. Technology-Neutral Implementation</h2>
+<p>This procedure establishes required outcomes and response activities rather than prescribing a specific vendor or technology.</p>
+<p>Implementation may use different tools for:</p>
+<ul>
+<li>Identity and access management.</li>
+<li>Endpoint security.</li>
+<li>Logging and monitoring.</li>
+<li>Cloud security.</li>
+<li>Source-code security.</li>
+<li>Email security.</li>
+<li>Data-loss prevention.</li>
+<li>Ticketing and case management.</li>
+<li>Evidence collection.</li>
+<li>Backup and recovery.</li>
+<li>Threat intelligence.</li>
+<li>AI security.</li>
+</ul>
+<p>Vendor-specific configuration requirements should be documented separately.</p>
+<h2>29. References and Research Basis</h2>
+<p>This procedure was developed with reference to the following authoritative guidance:</p>
+<ul>
+<li>
+<p>NIST, Special Publication 800-61 Revision 3, <em>Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile</em>, April 2025.
+  https://csrc.nist.gov/pubs/sp/800/61/r3/final</p>
+</li>
+<li>
+<p>NIST, <em>Incident Response</em> project resources.
+  https://csrc.nist.gov/projects/incident-response</p>
+</li>
+<li>
+<p>NIST, <em>The NIST Cybersecurity Framework (CSF) 2.0</em>, February 2024.
+  https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20</p>
+</li>
+<li>
+<p>CISA, <em>Cybersecurity and Infrastructure Security Agency</em>.
+  https://www.cisa.gov/</p>
+</li>
+<li>
+<p>CISA, <em>Federal Government Cybersecurity Incident and Vulnerability Response Playbooks: Operational Procedures for Planning and Conducting Cybersecurity Incident and Vulnerability Response Activities in Federal Civilian Executive Branch Information Systems</em>, November 2021.
+  https://www.cisa.gov/sites/default/files/publications/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf</p>
+</li>
+</ul>
+<p>NIST SP 800-61 Revision 3 is the primary incident-response reference for this procedure. NIST SP 800-61 Revision 2 is not used as a current normative reference because NIST withdrew it when Revision 3 was finalized in April 2025.</p>
+<h2>30. Version History</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1</td>
+<td>September 16, 2026</td>
+<td>Corrected the CISA Cybersecurity Incident and Vulnerability Response Playbooks reference. The previous CISA webpage URL no longer resolves; the reference now points directly to the CISA-hosted playbook PDF.</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>September 16, 2026</td>
+<td>Initial release. Establishes the organizational security incident response process and integrates incident response with the Igzibo technology governance framework.</td>
+</tr>
+</tbody>
+</table>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Partner With Igzibo?</h2>
+      <p>Let's discuss how our team can help you achieve your engineering and technology goals.</p>
+
+      <div class="cta-links">
+        <a href="/services/" class="btn btn-large">Explore Services</a>
+        <a href="https://calendly.com/igzibo-support" class="btn-outline btn-large">Schedule a Call</a>
+      </div>
+
+      <p class="cta-contact">
+        <strong>Phone:</strong> <a href="tel:+19712361374">971-236-1374</a> |
+        <strong>Email:</strong> <a href="mailto:support@igzibo.com">support@igzibo.com</a>
+      </p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>IGZIBO | Engineering Solutions. Building What's Next.</strong></p>
+      <p>Phone: <a href="tel:+19712361374">971-236-1374</a></p>
+      <p>Calendly: <a href="https://calendly.com/igzibo-support">Schedule a Meeting</a></p>
+      <p class="footer-copyright">&copy; 2024 Igzibo Engineering Solutions, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
