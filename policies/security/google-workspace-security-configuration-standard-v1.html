@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Workspace Security Configuration Standard | Igzibo Policies</title>
+  <meta name="description" content="Google Workspace Security Configuration Standard - Security policy document from Igzibo Engineering Solutions.">
+  <meta name="author" content="Igzibo Engineering Solutions">
+  <meta property="og:title" content="Google Workspace Security Configuration Standard | Igzibo Policies">
+  <meta property="og:description" content="Google Workspace Security Configuration Standard - Security policy document from Igzibo Engineering Solutions.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="logo-text">IGZIBO</a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/team/">Team</a></li>
+          <li class="nav-dropdown">
+            <a href="/policies/">Policies</a>
+            <ul class="nav-dropdown-menu">
+              <li><a href="/policies/client-services/">Client Services</a></li>
+              <li><a href="/policies/corporate/">Corporate</a></li>
+              <li><a href="/policies/governance/">Governance</a></li>
+              <li><a href="/policies/privacy/">Privacy</a></li>
+              <li><a href="/policies/recruiting/">Recruiting</a></li>
+              <li><a href="/policies/security/">Security</a></li>
+              <li><a href="/policies/website/">Website</a></li>
+            </ul>
+          </li>
+          <li><a href="https://calendly.com/igzibo-support" class="btn">Schedule Meeting</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+  <section>
+    <div class="container">
+      <p><a href="/policies/security/" class="policy-back-link">&larr; Back to Security Policies</a></p>
+
+      <article class="policy-document">
+        <h1>Google Workspace Security Configuration Standard</h1>
+        <p><strong>Organization:</strong> Igzibo Engineering Solutions, Inc.<br />
+<strong>Document:</strong> <code>google-workspace-security-configuration-standard-v1.md</code><br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Platform-Specific Standard<br />
+<strong>Effective Date:</strong> September 16, 2026<br />
+<strong>Owner:</strong> Igzibo Engineering Solutions, Inc.<br />
+<strong>Review Cycle:</strong> At least annually and after material security, legal, contractual, or platform changes</p>
+<h2>Definitions</h2>
+<ul>
+<li><strong>AUP</strong> — Technology Acceptable Use Policy.</li>
+<li><strong>AI</strong> — Artificial Intelligence.</li>
+<li><strong>Admin Account</strong> — An account with administrative privileges within Google Workspace.</li>
+<li><strong>Google Workspace</strong> — Google's cloud productivity and collaboration service used by Igzibo when approved.</li>
+<li><strong>IAM</strong> — Identity and Access Management.</li>
+<li><strong>MFA</strong> — Multi-Factor Authentication.</li>
+<li><strong>SSO</strong> — Single Sign-On.</li>
+<li><strong>Organizational Account</strong> — An account issued, controlled, or authorized by Igzibo for business use.</li>
+<li><strong>Restricted Information</strong> — Information requiring the highest level of protection under the Data Classification and Handling Standard.</li>
+</ul>
+<h2>1. Purpose</h2>
+<p>This standard defines minimum security configuration expectations for Igzibo's Google Workspace environment.</p>
+<p>It is intentionally platform-specific. It implements the requirements of the broader technology governance framework and does not replace technology-neutral policies or standards.</p>
+<h2>2. Scope</h2>
+<p>This standard applies to Google Workspace services administered or authorized by Igzibo, including organizational accounts, administrative accounts, email, Drive, shared collaboration resources, and related Workspace security controls.</p>
+<p>Where Google Workspace is not used, equivalent controls should be addressed through the applicable platform-specific standard.</p>
+<h2>3. Administrative Accounts</h2>
+<p>Google Workspace administrative access must use individually assigned administrator identities.</p>
+<p>Administrative accounts must not be shared.</p>
+<p>Administrative access should be limited to personnel who require it and should use MFA.</p>
+<p>Where supported, stronger authentication methods should be used for administrative accounts.</p>
+<h2>4. Multi-Factor Authentication</h2>
+<p>MFA must be enabled for administrative accounts and should be enabled for organizational user accounts.</p>
+<p>MFA settings should be configured to reduce the risk of account takeover, including controls that discourage unauthorized authentication approvals.</p>
+<h2>5. Account Lifecycle</h2>
+<p>Organizational accounts must be created, modified, suspended, and removed according to the Identity and Access Management Standard and Employee and Contractor Offboarding Procedure.</p>
+<p>Inactive or unnecessary accounts should be disabled or removed.</p>
+<p>Shared accounts should be avoided unless there is a documented business requirement and appropriate compensating controls.</p>
+<h2>6. External Sharing</h2>
+<p>External sharing must be controlled according to business need and information classification.</p>
+<p>Users must not share Restricted Information externally unless authorized and permitted by applicable client, contractual, legal, and governance requirements.</p>
+<p>Administrative settings should be configured to reduce unnecessary external sharing.</p>
+<h2>7. Google Drive and Shared Resources</h2>
+<p>Business information must be stored in approved organizational locations.</p>
+<p>Access to shared drives, folders, and documents must follow least-privilege principles.</p>
+<p>Ownership and access should be reviewed when personnel, projects, or business requirements change.</p>
+<h2>8. Email Security</h2>
+<p>Email security controls should be configured to reduce phishing, malware, unauthorized forwarding, and account-compromise risks.</p>
+<p>Users must follow the Technology Acceptable Use Policy and Security Incident Response Procedure when suspicious messages or account activity are identified.</p>
+<h2>9. Account Recovery</h2>
+<p>Recovery options must be controlled and associated with authorized identities.</p>
+<p>Administrative recovery mechanisms must be protected from unauthorized access.</p>
+<h2>10. Logging and Monitoring</h2>
+<p>Where supported by the applicable Google Workspace edition, security and administrative activity should be logged and reviewed according to risk.</p>
+<p>Material security events should be handled under the Security Incident Response Procedure.</p>
+<h2>11. Data and AI Controls</h2>
+<p>Google Workspace information remains subject to the Data Classification and Handling Standard and AI and Generative AI Usage Standard.</p>
+<p>Using a Google Workspace service does not by itself authorize disclosure of confidential, restricted, client, or personal information.</p>
+<h2>12. Third-Party Applications</h2>
+<p>Third-party applications requesting access to Google Workspace data must be evaluated and approved under the Technology and Third-Party Service Security Standard and the Technology and Third-Party Service Approval Procedure.</p>
+<p>Users must not authorize unapproved applications to access organizational information.</p>
+<h2>13. Administrator Security</h2>
+<p>Administrators should:</p>
+<ul>
+<li>Use dedicated administrative identities.</li>
+<li>Use MFA.</li>
+<li>Minimize administrative privileges.</li>
+<li>Review administrative accounts periodically.</li>
+<li>Avoid routine productivity work from privileged accounts where practical.</li>
+<li>Protect recovery and security settings.</li>
+<li>Review significant security alerts and configuration changes.</li>
+</ul>
+<h2>14. Configuration Changes</h2>
+<p>Material security configuration changes should be documented and reviewed according to applicable change-management and project requirements.</p>
+<p>Security settings must not be weakened merely to resolve user convenience issues without appropriate review.</p>
+<h2>15. Exceptions</h2>
+<p>Exceptions require documented approval and must identify the business justification, affected control, security risk, compensating controls, responsible owner, and review or expiration date.</p>
+<h2>16. Relationship to Other Governance Documents</h2>
+<p>This standard implements and complements:</p>
+<ol>
+<li>Technology Acceptable Use Policy.</li>
+<li>Identity and Access Management Standard.</li>
+<li>Password and Authentication Standard.</li>
+<li>Data Classification and Handling Standard.</li>
+<li>AI and Generative AI Usage Standard.</li>
+<li>Technology and Third-Party Service Security Standard.</li>
+<li>Security Incident Response Procedure.</li>
+<li>Employee and Contractor Offboarding Procedure.</li>
+</ol>
+<p>If Google Workspace provider requirements conflict with an Igzibo requirement, the applicable issue must be reviewed rather than silently weakening the Igzibo control.</p>
+<h2>Version History</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2026-09-16</td>
+<td>Initial Google Workspace security configuration standard.</td>
+</tr>
+</tbody>
+</table>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Partner With Igzibo?</h2>
+      <p>Let's discuss how our team can help you achieve your engineering and technology goals.</p>
+
+      <div class="cta-links">
+        <a href="/services/" class="btn btn-large">Explore Services</a>
+        <a href="https://calendly.com/igzibo-support" class="btn-outline btn-large">Schedule a Call</a>
+      </div>
+
+      <p class="cta-contact">
+        <strong>Phone:</strong> <a href="tel:+19712361374">971-236-1374</a> |
+        <strong>Email:</strong> <a href="mailto:support@igzibo.com">support@igzibo.com</a>
+      </p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>IGZIBO | Engineering Solutions. Building What's Next.</strong></p>
+      <p>Phone: <a href="tel:+19712361374">971-236-1374</a></p>
+      <p>Calendly: <a href="https://calendly.com/igzibo-support">Schedule a Meeting</a></p>
+      <p class="footer-copyright">&copy; 2024 Igzibo Engineering Solutions, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

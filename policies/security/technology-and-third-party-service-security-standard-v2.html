@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology and Third-Party Service Security Standard | Igzibo Policies</title>
+  <meta name="description" content="Technology and Third-Party Service Security Standard - Security policy document from Igzibo Engineering Solutions.">
+  <meta name="author" content="Igzibo Engineering Solutions">
+  <meta property="og:title" content="Technology and Third-Party Service Security Standard | Igzibo Policies">
+  <meta property="og:description" content="Technology and Third-Party Service Security Standard - Security policy document from Igzibo Engineering Solutions.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="logo-text">IGZIBO</a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/team/">Team</a></li>
+          <li class="nav-dropdown">
+            <a href="/policies/">Policies</a>
+            <ul class="nav-dropdown-menu">
+              <li><a href="/policies/client-services/">Client Services</a></li>
+              <li><a href="/policies/corporate/">Corporate</a></li>
+              <li><a href="/policies/governance/">Governance</a></li>
+              <li><a href="/policies/privacy/">Privacy</a></li>
+              <li><a href="/policies/recruiting/">Recruiting</a></li>
+              <li><a href="/policies/security/">Security</a></li>
+              <li><a href="/policies/website/">Website</a></li>
+            </ul>
+          </li>
+          <li><a href="https://calendly.com/igzibo-support" class="btn">Schedule Meeting</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+  <section>
+    <div class="container">
+      <p><a href="/policies/security/" class="policy-back-link">&larr; Back to Security Policies</a></p>
+
+      <article class="policy-document">
+        <h1>Technology and Third-Party Service Security Standard</h1>
+        <p><strong>Organization:</strong> Igzibo Engineering Solutions, Inc.<br />
+<strong>Document:</strong> <code>technology-and-third-party-service-security-standard-v2.md</code><br />
+<strong>Version:</strong> 2.0<br />
+<strong>Status:</strong> Living standard<br />
+<strong>Effective Date:</strong> September 16, 2026<br />
+<strong>Owner:</strong> Igzibo Engineering Solutions, Inc.<br />
+<strong>Review Cycle:</strong> At least annually and after material security, legal, contractual, or technology changes</p>
+<h2>1. Purpose</h2>
+<p>This standard establishes minimum security requirements for selecting, evaluating, approving, implementing, using, monitoring, renewing, and retiring technology products and third-party services used by Igzibo.</p>
+<p>It is vendor-neutral and applies regardless of whether a service is provided by Google, Microsoft, Amazon, GitHub, a payroll provider, recruiting platform, AI provider, software vendor, independent contractor, or another third party.</p>
+<p>The standard complements the Technology Acceptable Use Policy, Identity and Access Management Standard, Data Classification and Handling Standard, and AI and Generative AI Usage Standard.</p>
+<h2>Definitions</h2>
+<ul>
+<li><strong>AI</strong> — Artificial Intelligence, technology capable of performing tasks commonly associated with human intelligence.</li>
+<li><strong>CISA</strong> — Cybersecurity and Infrastructure Security Agency, a U.S. government agency that provides cybersecurity guidance and resources.</li>
+<li><strong>Igzibo</strong> — Igzibo Engineering Solutions, Inc.</li>
+<li><strong>MFA</strong> — Multi-Factor Authentication, authentication requiring two or more independent authentication factors.</li>
+<li><strong>NIST</strong> — National Institute of Standards and Technology, a U.S. government agency that publishes cybersecurity and technology guidance.</li>
+<li>
+<p><strong>Organizational Resource</strong> — Any technology, account, system, service, device, information asset, or other resource owned, licensed, administered, funded, or authorized by Igzibo.</p>
+</li>
+<li>
+<p><strong>API</strong> — Application Programming Interface, a defined mechanism through which software systems communicate.</p>
+</li>
+<li><strong>SaaS</strong> — Software as a Service, software delivered and operated by a provider rather than entirely by the customer.</li>
+<li><strong>C-SCRM</strong> — Cybersecurity Supply Chain Risk Management, the process of identifying, assessing, and managing cybersecurity risks arising from technology products, services, suppliers, and dependencies.</li>
+<li><strong>Third Party</strong> — An organization or individual outside Igzibo that provides technology, services, access, data processing, or other capabilities.</li>
+<li><strong>Technology Service</strong> — A software, hardware, cloud, hosted, managed, or technology-enabled product or service used for business purposes.</li>
+<li><strong>Service Owner</strong> — The person responsible for the business purpose, configuration, access, risk, and continued need for a Technology Service.</li>
+<li><strong>Security Review</strong> — A documented evaluation of security, privacy, access, data, operational, and contractual risks.</li>
+<li><strong>Due Diligence</strong> — Reasonable investigation performed before entering into or materially expanding a relationship with a provider.</li>
+<li><strong>SSO</strong> — Single Sign-On, an authentication mechanism allowing an authorized identity to access multiple services through a centralized identity system.</li>
+<li><strong>RBAC</strong> — Role-Based Access Control, assigning permissions according to defined roles.</li>
+<li><strong>DPA</strong> — Data Processing Agreement, a contract defining how a provider may process information on behalf of an organization.</li>
+<li><strong>SLA</strong> — Service Level Agreement, contractual commitments concerning service availability, performance, support, or response.</li>
+<li><strong>SOW</strong> — Statement of Work, a document defining the scope, deliverables, responsibilities, and terms of an engagement.</li>
+<li><strong>SBOM</strong> — Software Bill of Materials, a record of software components and dependencies included in a software product.</li>
+<li><strong>Critical Service</strong> — A service whose significant interruption, compromise, or loss could materially affect Igzibo operations, clients, security, finances, or legal obligations.</li>
+</ul>
+<h2>2. Scope</h2>
+<p>This standard applies to:</p>
+<ul>
+<li>Software and cloud services.</li>
+<li>SaaS platforms.</li>
+<li>Infrastructure and hosting providers.</li>
+<li>APIs.</li>
+<li>Browser extensions and plugins.</li>
+<li>AI services.</li>
+<li>Developer tools.</li>
+<li>Code repositories and package registries.</li>
+<li>Collaboration and document platforms.</li>
+<li>Email and identity services.</li>
+<li>Payroll and human resources systems.</li>
+<li>Recruiting and staffing platforms.</li>
+<li>Financial and payment platforms.</li>
+<li>Security products.</li>
+<li>Managed service providers.</li>
+<li>Consultants and technology contractors.</li>
+<li>Technology suppliers and resellers.</li>
+<li>Any third-party service that receives Igzibo information or connects to an Igzibo system.</li>
+</ul>
+<p>It applies to paid, free, and trial services.</p>
+<h2>3. Governance Principles</h2>
+<p>Igzibo will apply these principles:</p>
+<ol>
+<li>Security must be considered before adoption.</li>
+<li>Review requirements must be proportional to risk.</li>
+<li>Information sensitivity must influence review depth.</li>
+<li>Access must follow least privilege.</li>
+<li>Every material service must have an accountable owner.</li>
+<li>Organizational accounts must be controlled by Igzibo rather than dependent on personal identities.</li>
+<li>Critical services require continuity and exit planning.</li>
+<li>Contracts should address security and data-handling requirements appropriate to risk.</li>
+<li>Services must be reviewed throughout their lifecycle.</li>
+<li>Igzibo should maintain visibility into material third-party dependencies.</li>
+</ol>
+<p>These principles are consistent with NIST Cybersecurity Framework 2.0 and NIST Cybersecurity Supply Chain Risk Management guidance.</p>
+<h2>4. Technology Inventory</h2>
+<p>Igzibo should maintain an inventory of material Technology Services.</p>
+<p>The inventory should identify, where applicable:</p>
+<ul>
+<li>Service name.</li>
+<li>Provider.</li>
+<li>Service Owner.</li>
+<li>Business purpose.</li>
+<li>Data classification.</li>
+<li>Users.</li>
+<li>Integrations.</li>
+<li>Administrative accounts.</li>
+<li>Contract owner.</li>
+<li>Renewal date.</li>
+<li>Criticality.</li>
+<li>Security review status.</li>
+<li>Known dependencies.</li>
+<li>Termination or exit requirements.</li>
+</ul>
+<p>The inventory should include materially important free and trial services.</p>
+<h2>5. Service Ownership</h2>
+<p>Every material Technology Service must have an identifiable Service Owner.</p>
+<p>The Service Owner is responsible for:</p>
+<ul>
+<li>Confirming business need.</li>
+<li>Maintaining appropriate access.</li>
+<li>Ensuring authorized use.</li>
+<li>Coordinating security review.</li>
+<li>Reviewing integrations.</li>
+<li>Monitoring continued business need.</li>
+<li>Coordinating renewal or termination.</li>
+<li>Ensuring information can be recovered or transferred when necessary.</li>
+</ul>
+<p>A material service should not be adopted without an accountable owner.</p>
+<h2>6. Risk Classification</h2>
+<p>Technology Services must be classified as Low, Moderate, High, or Critical.</p>
+<p>Risk classification must consider at least:</p>
+<ul>
+<li>Information sensitivity.</li>
+<li>Number and type of users.</li>
+<li>Administrative privileges.</li>
+<li>Identity-system access.</li>
+<li>Production-system access.</li>
+<li>Financial or personnel information.</li>
+<li>Client information.</li>
+<li>Business continuity impact.</li>
+<li>Regulatory or contractual obligations.</li>
+<li>External integrations.</li>
+<li>Provider concentration or lock-in.</li>
+<li>Security maturity and available assurance.</li>
+<li>Consequences of compromise or outage.</li>
+</ul>
+<h3>6.1 Low Risk</h3>
+<p>A service is generally Low Risk when it handles only Public information, has limited organizational impact, and does not receive privileged access or sensitive information.</p>
+<h3>6.2 Moderate Risk</h3>
+<p>A service is generally Moderate Risk when it handles Internal information, supports ordinary business operations, or has limited integrations without privileged access.</p>
+<h3>6.3 High Risk</h3>
+<p>A service is generally High Risk when it:</p>
+<ul>
+<li>Processes Confidential or Restricted information.</li>
+<li>Processes client information.</li>
+<li>Accesses organizational identities.</li>
+<li>Connects to production systems.</li>
+<li>Processes financial, personnel, or sensitive information.</li>
+<li>Has administrative capabilities.</li>
+<li>Is materially important to business operations.</li>
+</ul>
+<h3>6.4 Critical</h3>
+<p>A service is Critical when significant interruption, compromise, or loss could materially affect core operations, clients, security, finances, legal obligations, or access to other critical systems.</p>
+<p>Examples may include primary identity, email, core source control, payroll, core financial systems, and critical production infrastructure.</p>
+<p>When multiple criteria apply, the higher reasonable risk classification must be used unless an authorized risk decision documents otherwise.</p>
+<h2>7. Pre-Adoption Review</h2>
+<p>Before adopting a Moderate-, High-, or Critical-Risk service, Igzibo should evaluate:</p>
+<h3>Provider</h3>
+<ul>
+<li>Legal business identity.</li>
+<li>Operating jurisdictions.</li>
+<li>Relevant experience.</li>
+<li>Security history.</li>
+<li>Material public security incidents.</li>
+<li>Operational and financial stability where relevant.</li>
+</ul>
+<h3>Security</h3>
+<ul>
+<li>MFA.</li>
+<li>Administrative controls.</li>
+<li>Logging.</li>
+<li>Encryption.</li>
+<li>Vulnerability management.</li>
+<li>Security testing.</li>
+<li>Incident response.</li>
+<li>Security documentation.</li>
+<li>Independent assurance where appropriate.</li>
+</ul>
+<h3>Data</h3>
+<ul>
+<li>Information collected.</li>
+<li>Business purpose.</li>
+<li>Storage and processing locations.</li>
+<li>Access by provider personnel.</li>
+<li>Retention.</li>
+<li>Training or product-improvement use.</li>
+<li>Export capability.</li>
+<li>Deletion capability.</li>
+<li>End-of-contract treatment.</li>
+</ul>
+<h3>Integration</h3>
+<ul>
+<li>Information accessed.</li>
+<li>Actions performed.</li>
+<li>Requested permissions.</li>
+<li>Identity access.</li>
+<li>Cloud-storage access.</li>
+<li>Source-code access.</li>
+<li>Financial access.</li>
+<li>Persistent tokens or credentials.</li>
+</ul>
+<h3>Continuity</h3>
+<ul>
+<li>Provider outage impact.</li>
+<li>Data export.</li>
+<li>Alternative providers.</li>
+<li>Recovery process.</li>
+<li>Migration difficulty.</li>
+<li>Contractual notice periods.</li>
+</ul>
+<p>Security review should be proportional to risk. CISA Secure by Demand guidance supports considering security capabilities during procurement rather than treating security solely as a vendor responsibility.</p>
+<h2>8. Free and Trial Services</h2>
+<p>Free and trial services are subject to the same security principles as paid services.</p>
+<p>Users must not assume that a free service is suitable for organizational information.</p>
+<p>Confidential or Restricted information must not be uploaded to a free or trial service without authorization.</p>
+<p>Trial accounts must not become permanent business systems without appropriate ownership and review.</p>
+<h2>9. Third-Party Account Creation</h2>
+<p>Business accounts created with third-party services must:</p>
+<ul>
+<li>Have an authorized business purpose.</li>
+<li>Use an Organizational Account where practical.</li>
+<li>Be owned or controlled by Igzibo.</li>
+<li>Have an identifiable Service Owner.</li>
+<li>Use MFA where available.</li>
+<li>Avoid dependency on personal email.</li>
+<li>Avoid dependency on personal payment accounts.</li>
+<li>Have a documented recovery method.</li>
+</ul>
+<p>Users must not create Personal Accounts using Igzibo identities.</p>
+<h2>10. Third-Party Integrations and Delegated Access</h2>
+<p>Integrations must be reviewed according to the information and permissions they require.</p>
+<p>Users must not approve an integration merely because a service requests it.</p>
+<p>Before approval, determine:</p>
+<ul>
+<li>What information can be accessed.</li>
+<li>What actions can be performed.</li>
+<li>Whether access can be limited.</li>
+<li>Whether persistent tokens are created.</li>
+<li>Whether access can be revoked.</li>
+<li>Whether access exceeds the immediate business purpose.</li>
+</ul>
+<p>Unused integrations must be removed.</p>
+<p>OAuth, where used, must be configured with the minimum permissions necessary.</p>
+<p>Broad access to email, cloud storage, source repositories, or administrative functions requires heightened review.</p>
+<h2>11. Contractual Requirements</h2>
+<p>High-risk and critical services should have written contractual terms appropriate to risk.</p>
+<p>Where applicable, agreements should address:</p>
+<ul>
+<li>Confidentiality.</li>
+<li>Data ownership.</li>
+<li>Data processing.</li>
+<li>Security requirements.</li>
+<li>Incident notification.</li>
+<li>Breach response.</li>
+<li>Subcontractors.</li>
+<li>Data location.</li>
+<li>Data retention.</li>
+<li>Data deletion.</li>
+<li>Data export.</li>
+<li>Availability.</li>
+<li>Support.</li>
+<li>Termination.</li>
+<li>Transition assistance.</li>
+<li>Assurance or audit information.</li>
+</ul>
+<p>A DPA should be considered when a provider processes personal information on behalf of Igzibo or a client.</p>
+<p>An SLA should be considered when availability or response times are material to operations.</p>
+<h2>12. Client Requirements</h2>
+<p>Client contracts and security requirements must be reviewed before using a third-party service for client information.</p>
+<p>Client restrictions on cloud providers, AI services, data locations, subcontractors, repositories, software, or integrations must be followed.</p>
+<p>Igzibo approval of a service does not override a client-specific restriction.</p>
+<h2>13. Software Supply Chain</h2>
+<p>Software obtained from third parties must be evaluated according to risk.</p>
+<p>For material software, Igzibo should consider:</p>
+<ul>
+<li>Publisher and source.</li>
+<li>Version.</li>
+<li>Update history.</li>
+<li>Known vulnerabilities.</li>
+<li>Dependencies.</li>
+<li>Package integrity.</li>
+<li>Signatures or checksums where available.</li>
+<li>Security advisories.</li>
+<li>End-of-support status.</li>
+<li>Licensing.</li>
+<li>SBOM availability where appropriate.</li>
+</ul>
+<p>NIST SP 800-161 Rev. 1, including the November 2024 update, provides guidance for identifying, assessing, and mitigating cybersecurity supply-chain risks.</p>
+<h2>14. Open-Source Software</h2>
+<p>Open-source software may be used when appropriate.</p>
+<p>Material components should be evaluated for:</p>
+<ul>
+<li>License requirements.</li>
+<li>Known vulnerabilities.</li>
+<li>Maintainer activity.</li>
+<li>Dependency health.</li>
+<li>Package authenticity.</li>
+<li>Update practices.</li>
+<li>Production suitability.</li>
+</ul>
+<p>Open-source software must not be treated as inherently safe or unsafe solely because it is open source.</p>
+<h2>15. Developer Tools and Browser Extensions</h2>
+<p>Developer tools, browser extensions, plugins, and command-line utilities must be evaluated for:</p>
+<ul>
+<li>File access.</li>
+<li>Credential access.</li>
+<li>Network access.</li>
+<li>Source-code access.</li>
+<li>Data transmission.</li>
+<li>Telemetry.</li>
+<li>Downloaded-code execution.</li>
+<li>Elevated privileges.</li>
+</ul>
+<p>Tools that bypass organizational security controls must not be installed.</p>
+<h2>16. AI Services</h2>
+<p>AI services are subject to this standard and the AI and Generative AI Usage Standard.</p>
+<p>Before approving an AI service for business information, Igzibo should evaluate data retention, model-improvement practices, human access, security controls, account ownership, deletion, export, subprocessors, integration permissions, and client restrictions.</p>
+<p>AI services capable of taking actions through connected tools require heightened review.</p>
+<h2>17. Security Assurance</h2>
+<p>For higher-risk services, Igzibo may request or review available security evidence, such as independent assessments, security certifications, penetration-testing summaries, vulnerability-management information, incident-response documentation, architecture documentation, and privacy documentation.</p>
+<p>The absence of a certification does not automatically disqualify a provider.</p>
+<p>Assurance requirements must be proportional to risk.</p>
+<h2>18. Provider Security Incidents</h2>
+<p>Material provider security incidents must be evaluated promptly.</p>
+<p>The Service Owner should determine whether:</p>
+<ul>
+<li>Igzibo information may be affected.</li>
+<li>Client information may be affected.</li>
+<li>Credentials or tokens must be revoked.</li>
+<li>The service should be disabled.</li>
+<li>Contractual notification requirements apply.</li>
+<li>Clients or other parties must be notified.</li>
+<li>An alternative service is required.</li>
+</ul>
+<h2>19. Vulnerability and Patch Management</h2>
+<p>Technology services and software must be maintained reasonably current.</p>
+<p>Critical security updates should be prioritized.</p>
+<p>Unsupported software must not be used for critical business functions without documented risk acceptance and compensating controls.</p>
+<h2>20. Data Location and Transfer</h2>
+<p>For Confidential, Restricted, or client information, Igzibo should understand where information is stored and processed when relevant to legal, contractual, privacy, or security requirements.</p>
+<p>International transfers must comply with applicable legal and contractual requirements.</p>
+<h2>21. Business Continuity and Exit Planning</h2>
+<p>Critical Services must have a reasonable exit strategy.</p>
+<p>Where practical, Igzibo should know:</p>
+<ul>
+<li>How data can be exported.</li>
+<li>Export formats.</li>
+<li>Who controls administrative access.</li>
+<li>How credentials can be recovered.</li>
+<li>How integrations can be disconnected.</li>
+<li>How users can be migrated.</li>
+<li>How information can be deleted after migration.</li>
+<li>Contractual notice periods.</li>
+<li>Material migration dependencies.</li>
+</ul>
+<p>Vendor lock-in must be considered when it could materially affect continuity.</p>
+<h2>22. Renewal Review</h2>
+<p>Renewal is not automatic approval.</p>
+<p>For High-Risk and Critical services, the Service Owner should periodically confirm:</p>
+<ul>
+<li>Continued business need.</li>
+<li>Appropriate security.</li>
+<li>Appropriate access.</li>
+<li>Acceptable data handling.</li>
+<li>Acceptable contractual terms.</li>
+<li>Material incidents or changes.</li>
+<li>Continued ability to exit or migrate.</li>
+</ul>
+<h2>23. Termination</h2>
+<p>When a service is retired:</p>
+<ol>
+<li>Revoke user access.</li>
+<li>Revoke administrative access.</li>
+<li>Revoke API credentials and tokens.</li>
+<li>Disable integrations.</li>
+<li>Export required information.</li>
+<li>Preserve information subject to retention or legal requirements.</li>
+<li>Delete information according to contractual and organizational requirements.</li>
+<li>Close or cancel the service.</li>
+<li>Update the technology inventory.</li>
+<li>Document material termination activities.</li>
+</ol>
+<h2>24. Exceptions</h2>
+<p>Exceptions require documented authorization and must identify the affected service, requirement, business justification, duration, risk, and compensating controls.</p>
+<h2>25. Enforcement</h2>
+<p>Failure to follow this standard may result in service suspension, access restriction, additional training, contractual action, employment action where applicable, or other appropriate measures.</p>
+<h2>26. References</h2>
+<ul>
+<li>NIST Cybersecurity Framework 2.0: https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20</li>
+<li>NIST SP 800-161 Rev. 1, updated November 2024: https://csrc.nist.gov/pubs/sp/800/161/r1/upd1/final</li>
+<li>NIST Cybersecurity Supply Chain Risk Management publications: https://csrc.nist.gov/Projects/cyber-supply-chain-risk-management/publications</li>
+<li>CISA: https://www.cisa.gov/</li>
+</ul>
+<h2>27. Version History</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2026-09-16</td>
+<td>Initial technology and third-party service security standard.</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>2026-09-16</td>
+<td>Coordinated governance revision; removed internal citation artifacts, standardized terminology, strengthened risk-classification criteria, clarified service lifecycle requirements, and aligned supply-chain references with current NIST guidance.</td>
+</tr>
+</tbody>
+</table>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Partner With Igzibo?</h2>
+      <p>Let's discuss how our team can help you achieve your engineering and technology goals.</p>
+
+      <div class="cta-links">
+        <a href="/services/" class="btn btn-large">Explore Services</a>
+        <a href="https://calendly.com/igzibo-support" class="btn-outline btn-large">Schedule a Call</a>
+      </div>
+
+      <p class="cta-contact">
+        <strong>Phone:</strong> <a href="tel:+19712361374">971-236-1374</a> |
+        <strong>Email:</strong> <a href="mailto:support@igzibo.com">support@igzibo.com</a>
+      </p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>IGZIBO | Engineering Solutions. Building What's Next.</strong></p>
+      <p>Phone: <a href="tel:+19712361374">971-236-1374</a></p>
+      <p>Calendly: <a href="https://calendly.com/igzibo-support">Schedule a Meeting</a></p>
+      <p class="footer-copyright">&copy; 2024 Igzibo Engineering Solutions, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

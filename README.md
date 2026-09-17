@@ -25,6 +25,7 @@ Welcome to the Igzibo Engineering Solutions website repository. This is a compre
 - **Team** - Team overview and structure
 - **Engineers** - Directory of engineering professionals with individual profiles
 - **Leadership** - Technical leaders and executives with individual profiles
+- **Policies** - Policy categories and linked HTML policy documents generated from Markdown
 
 ### 🎨 Design Features
 
@@ -45,6 +46,7 @@ Each page includes:
 ### 🔗 Easy Navigation
 
 - Sticky header with navigation menu
+- Policies dropdown with Client Services, Corporate, Governance, Privacy, Recruiting, Security, and Website categories
 - Clear page hierarchy
 - Breadcrumb-like structure
 - Quick links to key pages
@@ -69,9 +71,19 @@ Each page includes:
 │   │   └── [engineer-name]/  # Individual engineer profiles
 │   └── leadership/           # Leadership directory
 │       └── [leader-name]/    # Individual leader profiles
+├── policies/                 # Policy pages and source Markdown documents
+│   ├── client-services/
+│   ├── corporate/
+│   ├── governance/
+│   ├── privacy/
+│   ├── recruiting/
+│   ├── security/
+│   └── website/
 ├── assets/
 │   ├── css/styles.css        # Unified styling
 │   └── js/main.js            # Shared functionality
+├── scripts/
+│   └── build_policies.py      # Generates policy HTML from Markdown
 ├── README.md                 # This file
 └── WEBSITE_GUIDE.md          # Detailed maintenance guide
 ```
@@ -96,11 +108,24 @@ The website is designed for easy team member management:
 
 See [WEBSITE_GUIDE.md](WEBSITE_GUIDE.md) for detailed instructions.
 
+## Managing Policies
+
+Policy source files live as Markdown documents in the seven category folders under `policies/`. The generated HTML documents and category index pages are committed to the repository so GitHub Pages can serve them as static files.
+
+After adding or updating a policy Markdown file, regenerate the policy pages from the repository root:
+
+```powershell
+& "..\venvs\igzibo-github-io\Scripts\python.exe" scripts\build_policies.py
+```
+
+The generator uses the first level-one heading in each Markdown file as the policy display name and document title. It also rebuilds `policies/index.html` and every category `index.html`. Policy pages use the shared stylesheet and include the standard site navigation and contact details.
+
 ## Technology Stack
 
 - **HTML5** - Semantic markup
 - **CSS3** - Modern styling with CSS variables and Grid/Flexbox
 - **JavaScript** - Vanilla JS for smooth interactions
+- **Python** - Markdown-to-HTML policy page generator and development tooling
 - **Google Fonts** - Inter font family
 - **Responsive Design** - Mobile-first approach
 

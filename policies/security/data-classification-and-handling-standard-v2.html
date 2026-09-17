@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Classification and Handling Standard | Igzibo Policies</title>
+  <meta name="description" content="Data Classification and Handling Standard - Security policy document from Igzibo Engineering Solutions.">
+  <meta name="author" content="Igzibo Engineering Solutions">
+  <meta property="og:title" content="Data Classification and Handling Standard | Igzibo Policies">
+  <meta property="og:description" content="Data Classification and Handling Standard - Security policy document from Igzibo Engineering Solutions.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="logo-text">IGZIBO</a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/team/">Team</a></li>
+          <li class="nav-dropdown">
+            <a href="/policies/">Policies</a>
+            <ul class="nav-dropdown-menu">
+              <li><a href="/policies/client-services/">Client Services</a></li>
+              <li><a href="/policies/corporate/">Corporate</a></li>
+              <li><a href="/policies/governance/">Governance</a></li>
+              <li><a href="/policies/privacy/">Privacy</a></li>
+              <li><a href="/policies/recruiting/">Recruiting</a></li>
+              <li><a href="/policies/security/">Security</a></li>
+              <li><a href="/policies/website/">Website</a></li>
+            </ul>
+          </li>
+          <li><a href="https://calendly.com/igzibo-support" class="btn">Schedule Meeting</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+  <section>
+    <div class="container">
+      <p><a href="/policies/security/" class="policy-back-link">&larr; Back to Security Policies</a></p>
+
+      <article class="policy-document">
+        <h1>Data Classification and Handling Standard</h1>
+        <p><strong>Organization:</strong> Igzibo Engineering Solutions, Inc.<br />
+<strong>Document:</strong> <code>data-classification-and-handling-standard-v2.md</code><br />
+<strong>Version:</strong> 2.0<br />
+<strong>Status:</strong> Living standard<br />
+<strong>Effective Date:</strong> September 16, 2026<br />
+<strong>Owner:</strong> Igzibo Engineering Solutions, Inc.<br />
+<strong>Review Cycle:</strong> At least annually and after material legal, contractual, security, or technology changes</p>
+<h2>1. Purpose</h2>
+<p>This standard establishes a practical classification system for Igzibo information and defines minimum handling requirements.</p>
+<p>The standard is technology-neutral and applies regardless of where information is stored or which vendor provides the storage, processing, communication, or collaboration service.</p>
+<h2>Definitions</h2>
+<ul>
+<li><strong>AI</strong> — Artificial Intelligence, technology capable of performing tasks commonly associated with human intelligence.</li>
+<li><strong>CISA</strong> — Cybersecurity and Infrastructure Security Agency, a U.S. government agency that provides cybersecurity guidance and resources.</li>
+<li><strong>Igzibo</strong> — Igzibo Engineering Solutions, Inc.</li>
+<li><strong>MFA</strong> — Multi-Factor Authentication, authentication requiring two or more independent authentication factors.</li>
+<li><strong>NIST</strong> — National Institute of Standards and Technology, a U.S. government agency that publishes cybersecurity and technology guidance.</li>
+<li>
+<p><strong>Organizational Resource</strong> — Any technology, account, system, service, device, information asset, or other resource owned, licensed, administered, funded, or authorized by Igzibo.</p>
+</li>
+<li>
+<p><strong>PII</strong> — Personally Identifiable Information, information that identifies or can reasonably be linked to an individual.</p>
+</li>
+<li><strong>Public Information</strong> — Information approved for unrestricted public distribution.</li>
+<li><strong>Internal Information</strong> — Non-public information intended for routine organizational use.</li>
+<li><strong>Confidential Information</strong> — Non-public information whose unauthorized disclosure could create meaningful business, contractual, privacy, competitive, or reputational risk.</li>
+<li><strong>Restricted Information</strong> — Information requiring the strongest controls because unauthorized access, disclosure, alteration, or loss could cause significant harm, legal exposure, contractual problems, or security risk.</li>
+<li><strong>Data Owner</strong> — The person responsible for determining appropriate business use, classification, access, and handling requirements.</li>
+<li><strong>Data Custodian</strong> — A person or system responsible for storing, processing, securing, or administering information.</li>
+<li><strong>DLP</strong> — Data Loss Prevention, controls intended to prevent unauthorized disclosure or movement of information.</li>
+<li><strong>Encryption</strong> — A technical method that transforms information so it cannot reasonably be read without the required key or credentials.</li>
+</ul>
+<h2>2. Scope</h2>
+<p>This standard applies to information created, received, stored, processed, transmitted, or otherwise handled by Igzibo, including information belonging to or supplied by clients.</p>
+<p>It applies to email, cloud storage, source repositories, databases, local devices, paper records, collaboration systems, approved AI systems, and other storage or processing locations.</p>
+<h2>3. Classification Levels</h2>
+<h3>3.1 Public</h3>
+<p>Information approved for public release.</p>
+<p>Examples include published website content, public marketing materials, public job postings, approved public documentation, and intentionally public repositories.</p>
+<h3>3.2 Internal</h3>
+<p>Non-public information intended for normal Igzibo business use.</p>
+<p>Examples include internal procedures, routine internal communications, internal project planning, and non-public operational documentation.</p>
+<h3>3.3 Confidential</h3>
+<p>Information requiring controlled access because disclosure could create meaningful business, contractual, privacy, competitive, or reputational risk.</p>
+<p>Examples include client information, contracts, proposals, non-public pricing, business plans, worker information, non-public source code, internal security documentation, and business credentials.</p>
+<h3>3.4 Restricted</h3>
+<p>Information requiring the strongest controls.</p>
+<p>Examples include authentication secrets, private cryptographic keys, highly sensitive PII, security-incident evidence, client data subject to strict controls, legally restricted information, and high-impact financial or identity information.</p>
+<h2>4. Classification Rules</h2>
+<p>When classification is uncertain, users must apply the more protective reasonable classification until the Data Owner provides guidance.</p>
+<p>Client or contractual requirements may require a stricter classification.</p>
+<p>Users must not downgrade information merely to make it easier to share.</p>
+<h2>5. Handling Requirements</h2>
+<table>
+<thead>
+<tr>
+<th>Handling Activity</th>
+<th>Public</th>
+<th>Internal</th>
+<th>Confidential</th>
+<th>Restricted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Public disclosure</td>
+<td>Allowed</td>
+<td>Not allowed unless approved</td>
+<td>Prohibited</td>
+<td>Prohibited unless specifically authorized</td>
+</tr>
+<tr>
+<td>Organizational storage</td>
+<td>Allowed</td>
+<td>Allowed</td>
+<td>Approved systems only</td>
+<td>Approved restricted systems only</td>
+</tr>
+<tr>
+<td>External sharing</td>
+<td>Allowed</td>
+<td>Business need</td>
+<td>Explicit authorization</td>
+<td>Explicit authorization and appropriate controls</td>
+</tr>
+<tr>
+<td>Personal email</td>
+<td>Not authorized for business use</td>
+<td>Prohibited for business use</td>
+<td>Prohibited</td>
+<td>Prohibited</td>
+</tr>
+<tr>
+<td>Personal cloud storage</td>
+<td>Not authorized for business use</td>
+<td>Prohibited for business use</td>
+<td>Prohibited</td>
+<td>Prohibited</td>
+</tr>
+<tr>
+<td>Unapproved AI service</td>
+<td>May be used for public information only</td>
+<td>Review required</td>
+<td>Prohibited</td>
+<td>Prohibited</td>
+</tr>
+<tr>
+<td>Encryption in transit</td>
+<td>Recommended</td>
+<td>Required where practical</td>
+<td>Required</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Encryption at rest</td>
+<td>Recommended</td>
+<td>Recommended</td>
+<td>Required where supported</td>
+<td>Required where supported</td>
+</tr>
+<tr>
+<td>Access control</td>
+<td>Minimal</td>
+<td>Authenticated users</td>
+<td>Least privilege</td>
+<td>Strongest practical controls</td>
+</tr>
+<tr>
+<td>Public repository</td>
+<td>Allowed only when intentionally approved</td>
+<td>Prohibited unless approved</td>
+<td>Prohibited</td>
+<td>Prohibited</td>
+</tr>
+</tbody>
+</table>
+<p>Public classification does not independently authorize use of personal accounts or personal services for business activity. The Technology Acceptable Use Policy still governs account and service use.</p>
+<h2>6. Collection and Minimization</h2>
+<p>Igzibo should collect and retain only information reasonably necessary for an authorized business purpose.</p>
+<p>Users should avoid unnecessary copies, exports, downloads, retention, and collection of sensitive information.</p>
+<h2>7. Storage</h2>
+<p>Confidential and Restricted information must be stored only in approved systems appropriate to its sensitivity.</p>
+<p>Such information must not be stored in personal email, personal cloud storage, personal repositories, unapproved applications, unapproved AI services, or public file-sharing locations.</p>
+<h2>8. Transmission and Sharing</h2>
+<p>Recipients must be verified before Confidential or Restricted information is transmitted.</p>
+<p>Users must use encrypted or access-controlled transfer methods where appropriate.</p>
+<p>External sharing requires a legitimate business purpose and minimum necessary information and access.</p>
+<p>Public links must not be used for Confidential or Restricted information.</p>
+<p>Access must be removed when no longer required.</p>
+<h2>9. Credentials and Secrets</h2>
+<p>Credentials, passwords, API keys, access tokens, private keys, certificates, and similar secrets are Restricted by default.</p>
+<p>They must not be committed to source control, published publicly, sent through ordinary email, stored in plaintext documentation, or uploaded to unapproved services.</p>
+<p>Secrets should be stored using an approved secrets-management mechanism.</p>
+<h2>10. Client Information</h2>
+<p>Client information must be handled according to applicable contracts and client security requirements.</p>
+<p>If client requirements are stricter than this standard, the client requirement applies.</p>
+<p>Client information must not be used for unrelated personal, educational, demonstration, marketing, or AI-training purposes.</p>
+<h2>11. AI and Automated Processing</h2>
+<p>Confidential and Restricted information must not be entered into an AI or automated-processing service unless the service and use case are approved.</p>
+<p>Approval must consider retention, model training, human access, third-party transfers, deletion, contractual protections, and other relevant risks.</p>
+<h2>12. Retention and Disposal</h2>
+<p>Information should be retained only as long as necessary for legitimate business, legal, contractual, or operational requirements.</p>
+<p>Legal holds, contractual requirements, investigations, and other mandatory preservation requirements take precedence over ordinary deletion.</p>
+<p>Information no longer required should be securely deleted or destroyed using a method appropriate to its sensitivity.</p>
+<h2>13. Data Incidents</h2>
+<p>Accidental disclosure, loss, unauthorized access, or incorrect sharing of Confidential or Restricted information must be reported promptly.</p>
+<p>Users must not conceal mistakes.</p>
+<h2>14. Data Ownership</h2>
+<p>Unless otherwise established by contract, organizational information created for Igzibo business is an organizational resource.</p>
+<p>Client-owned information remains subject to client ownership and contractual requirements.</p>
+<h2>15. References</h2>
+<ul>
+<li>NIST Cybersecurity Framework 2.0: https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20</li>
+<li>NIST Privacy Framework: https://www.nist.gov/privacy-framework</li>
+</ul>
+<h2>16. Version History</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2026-09-16</td>
+<td>Initial data classification and handling standard.</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>2026-09-16</td>
+<td>Coordinated governance revision; corrected personal-account handling for Public information and standardized classification, handling, and terminology.</td>
+</tr>
+</tbody>
+</table>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Partner With Igzibo?</h2>
+      <p>Let's discuss how our team can help you achieve your engineering and technology goals.</p>
+
+      <div class="cta-links">
+        <a href="/services/" class="btn btn-large">Explore Services</a>
+        <a href="https://calendly.com/igzibo-support" class="btn-outline btn-large">Schedule a Call</a>
+      </div>
+
+      <p class="cta-contact">
+        <strong>Phone:</strong> <a href="tel:+19712361374">971-236-1374</a> |
+        <strong>Email:</strong> <a href="mailto:support@igzibo.com">support@igzibo.com</a>
+      </p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>IGZIBO | Engineering Solutions. Building What's Next.</strong></p>
+      <p>Phone: <a href="tel:+19712361374">971-236-1374</a></p>
+      <p>Calendly: <a href="https://calendly.com/igzibo-support">Schedule a Meeting</a></p>
+      <p class="footer-copyright">&copy; 2024 Igzibo Engineering Solutions, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

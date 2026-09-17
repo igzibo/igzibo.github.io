@@ -30,6 +30,17 @@ igzibo.github.io/
 │       ├── index.html                 # Leadership team listing
 │       └── [leader-name]/
 │           └── index.html             # Individual leader profile
+├── policies/
+│   ├── index.html                     # Policies landing page
+│   ├── client-services/               # Client Services policy category
+│   ├── corporate/                     # Corporate policy category
+│   ├── governance/                    # Governance policy category
+│   ├── privacy/                       # Privacy policy category
+│   ├── recruiting/                    # Recruiting policy category
+│   ├── security/                      # Security policy category
+│   └── website/                       # Website policy category
+├── scripts/
+│   └── build_policies.py              # Generates policy HTML from Markdown
 └── README.md                          # This file
 ```
 
@@ -51,6 +62,36 @@ igzibo.github.io/
 - **team/** - Team overview and statistics
 - **team/engineers/** - Engineers listing and directory
 - **team/leadership/** - Leadership team and executives
+
+### Policy Pages
+
+- **policies/** - Policies landing page with links to every category
+- **policies/[category]/** - Category page listing policies by their Markdown title
+- **policies/[category]/[policy].html** - Generated, styled HTML policy document
+
+All site pages include a Policies dropdown in the top navigation. The dropdown links to the seven category pages: Client Services, Corporate, Governance, Privacy, Recruiting, Security, and Website.
+
+## Managing Policy Documents
+
+Policy source files are Markdown documents stored in their category folder under `policies/`. Do not edit generated policy HTML directly. Add or update the Markdown source, ensuring it has a level-one heading for the document title, then run the generator from the repository root:
+
+```powershell
+& "..\venvs\igzibo-github-io\Scripts\python.exe" scripts\build_policies.py
+```
+
+The generator:
+
+- Converts each Markdown file to an HTML document.
+- Uses the Markdown level-one heading as the display name and page title.
+- Rebuilds each category index and the parent Policies page.
+- Applies the shared stylesheet and standard site navigation.
+- Includes the standard phone, email, and Calendly contact details.
+
+The generator requires the `markdown` package listed in `requirements-dev.txt`. Install development dependencies with:
+
+```powershell
+& "..\venvs\igzibo-github-io\Scripts\python.exe" -m pip install -r requirements-dev.txt
+```
 
 ## Adding New Team Members
 
@@ -122,6 +163,7 @@ All pages use a unified styling system defined in `assets/css/styles.css`. Key d
 `assets/js/main.js` provides:
 
 - Active navigation link detection
+- Policies dropdown injection for legacy pages without static navigation markup
 - Smooth scroll behavior for anchor links
 
 ## SEO Optimization
