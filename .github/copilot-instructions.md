@@ -83,6 +83,8 @@ If an unrelated problem is discovered, mention it in the final response rather t
 
 ## Commit
 
+Provide a git commit message that clearly describes the change made after each change made. 
+
 Each commit should:
 
 - Represent one logical change.
