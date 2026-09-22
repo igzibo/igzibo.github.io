@@ -97,7 +97,8 @@ The website is designed for easy team member management:
 1. Create a new folder: `team/engineers/[engineer-name]/`
 2. Copy template from `team/engineers/john-doe/index.html`
 3. Update engineer information (name, role, bio, skills, etc.)
-4. Add to `team/engineers/index.html` listing
+4. Add the engineer card to `team/engineers/index.html`, including the correct profile photo asset and summary text
+5. If the profile is based on a resume or candidate brief, use that source material to fill in the tile summary and profile details, and do not leave stale CV links or `cv/` routes behind if the site no longer hosts standalone CV pages
 
 ### Adding a Leader
 
